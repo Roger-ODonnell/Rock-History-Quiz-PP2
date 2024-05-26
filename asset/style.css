@@ -20,6 +20,8 @@ h1{
 }
 h2{
     text-align: center;
+}
+#home-h2{
     margin-top: 5rem;
 }
 
@@ -34,9 +36,28 @@ h2{
     color: white;
     font-size: 70PX;
     font-weight: bold;
+    border-radius: 1rem;
+    border-color: #391e45;
 }
 #start-button:hover{
-    background-color: #b086c4;
+    background-color: #6a3a80;
+    transform: scale(1.2);
+}
+
+#start-again{
+    margin-left: 2rem;
+}
+#start-again button{
+    padding: 1rem 1rem;
+    background-color: #270C33;
+    border-radius: 1rem;
+    font-family: "RocknRoll One", sans-serif;
+    color: white;
+    font-size: 20px;
+    border-color: transparent;
+    background-position: 0px;
+}
+#start-again button:hover{
     transform: scale(1.2);
 }
 
