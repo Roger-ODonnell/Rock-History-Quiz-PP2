@@ -11,6 +11,11 @@ body{
 h1, h2{
     text-align: center;
 }
+h1{
+    background-image: url(/asset/images/rock-banner.jpeg);
+    padding: 1rem 5em;
+    background-position: 0;
+}
 
 .center{
     text-align: center;
@@ -27,4 +32,31 @@ h1, h2{
 #start-button:hover{
     background-color: #b086c4;
     transform: scale(1.2);
+}
+
+#form{
+    text-align: center;
+    margin-top: 10rem;
+}
+#form h3{
+    font-size: 30px;
+}
+#answers ul{
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;  
+    justify-content: center;  
+}
+#answers li{
+    padding: 2rem 2rem;
+    background-color: #CEBFD5;
+    border-radius: 1rem;
+}
+#answers a{
+    color: white;
+    text-decoration: none;
+}
+#answers li:hover{
+    transform: scale(1.2);
+    background-color: #452255;
 }
