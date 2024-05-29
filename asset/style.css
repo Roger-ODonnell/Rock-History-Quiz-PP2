@@ -8,7 +8,10 @@ body{
     margin: 0;
     position: relative;
     min-height: 100vh;
+    min-width: 100vw;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 h1{
@@ -61,18 +64,24 @@ h2{
     transform: scale(1.2);
 }
 
-#form{
+#quiz{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 1rem;
+    padding-bottom: 5rem;
 }
-#form h3{
+#quiz h3{
     font-size: 30px;
 }
 #answers ul{
-    list-style-type: none;
     display: flex;
-    gap: 1rem;  
     justify-content: center;  
+    align-items: center;
+    list-style-type: none;
+    gap: 1rem;  
 }
 #answers li{
     padding: 2rem 2rem;
@@ -90,12 +99,14 @@ h2{
 }
 
 footer{ 
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 2.5rem;
     background-image: url(/asset/images/rock-banner.jpeg);
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
+    font-size: 20px;
+    margin-top: auto;
 }
 footer ul{
     display: flex;
@@ -110,4 +121,84 @@ footer a{
 }
 footer a:hover{
     transform: scale(1.2);
+}
+
+@media screen and (max-width: 432px){
+    footer a{
+        font-size: 14px;
+    }
+
+    #quiz h3{
+        font-size: 20px;
+    }
+
+    body{
+        width: 100vw;
+    }
+
+    #answers ul{
+        max-width: 100%;
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    #start-again button{
+        padding: .5rem;
+        margin: 0;
+        text-align: left;
+        margin-left: -1rem;
+    }
+
+}
+@media screen and (max-width: 768px){
+    h1{
+        font-size: 20px;
+    }
+    #home-h2{
+        padding: 0 1rem;
+    }
+
+    #start-button{
+        font-size: 50px;
+        padding: 1rem 1rem;
+        margin-top: 4rem;
+    }
+
+    footer{
+        font-size: 14px;
+    }
+
+    ul{
+        margin-right: 5rem;
+        margin-bottom: 0rem;
+    }
+
+    #answers ul{
+        max-width: 100%;
+        width: 100vw;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    #start-again button{
+        padding: .5rem;
+        margin: 0;
+        text-align: left;
+        margin-left: -1rem;
+    }
 }
