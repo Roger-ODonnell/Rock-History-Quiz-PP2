@@ -3,22 +3,22 @@ let correctAnswers = 0;
 let livesElement = document.getElementById("lives");
 let correctAnswersElement = document.getElementById("correct-answers");
 
-livesElement.innerHTML = `Lives: ${lives}`;
-correctAnswersElement.innerHTML = `Correct Answers: ${correctAnswers}`;
-
+//question object to populate new questions and answers
 let questionObj = {
   question: "What famous Irish band was phil Lynott in?",
   answer: "Thin lizzy",
 };
-
+//function to generate a random question in base html elements
 function randomQuestion(questionObj) {
   let question = document.getElementById("question");
   question.innerHTML = `${questionObj.question}`;
 
+  //variable to house answer elements
   let answerElements = document.getElementsByClassName("answer");
 
+  //random answers array to populate other 3 answer slots 
   let randomAnswers = ["Def Leopard", "The Dubliners", "U2", "Fish", "Cow"];
-
+  //array of answers selected for player to chose from
   let answersSelected = [];
 
   //Add random answers to answersSelected Array
@@ -32,6 +32,7 @@ function randomQuestion(questionObj) {
     }
   }
 
+  //Add the right answer into a random slot in the answer elements
   let randomIndex = Math.floor(Math.random() * answerElements.length);
   answersSelected.splice(randomIndex, 0, questionObj.answer);
 
@@ -41,4 +42,11 @@ function randomQuestion(questionObj) {
   }
 }
 
+//update the lives and right questions counters to give the player feedback
+function updateCounters(){
+  livesElement.innerHTML = `Lives: ${lives}`;
+  correctAnswersElement.innerHTML = `Correct Answers: ${correctAnswers}`;
+}
+
 randomQuestion(questionObj);
+updateCounters();
