@@ -1,59 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!--meta tag keywords-->
-    <meta name="keywords" content="quiz, rock, music, fun">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="quiz, rock, music, fun" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--Link to stylesheet-->
-    <link rel="stylesheet" href="/asset/style.css">
-    <link rel="icon" type="image/x-icon" href="/asset/images/guitar-solid.svg">
+    <link rel="stylesheet" href="/asset/style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/asset/images/guitar-solid.svg"
+    />
     <!--Link to font awesome favicons-->
-    <script src="https://kit.fontawesome.com/f5d3de7183.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/f5d3de7183.js"
+      crossorigin="anonymous"
+    ></script>
     <!--Page title-->
     <title>Homepage</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Great Irish Rock Quiz</h1>
+      <h1>Great Irish Rock Quiz</h1>
     </header>
 
     <main>
-        <div id="start-again">
-            <button onclick="location.href = '/index.html'">Start Again?</button>
-        </div>
-        <section id="quiz">
-            <!--Question to change via script.js-->
-            <div>
-                <h3 id="question">Template question?</h3>
-            </div>
-            <!--Answers to be loaded in by javascript-->
-            <div id="answers">
-                <ul>
-                    <a class="answer"href="#"><li>Answer 1</li></a>
-                    <a class="answer" href="#"><li>Answer 2</li></a>
-                    <a class="answer" href="#"><li>Answer 3</li></a>
-                    <a class="answer" href="#"><li>Answer 4</li></a>
-                </ul>
-            </div>
-
-            <div>
-                <h3 id="correct-answers">Correct Answers: 0</h3>
-            </div>
-            <div>
-                <h3 id="lives">Lives: 3</h3>
-            </div>
-        </section>
-    </main>
-    
-    <footer id="footer">
+      <div id="start-again">
+        <button onclick="location.href = '/index.html'">Start Again?</button>
+      </div>
+      <section id="quiz">
+        <!--Question to change via script.js-->
         <div>
-            <ul>
-                <a target="_blank" href="https://github.com/Roger-ODonnell"><li>My Github</li></a>
-                <a target="_blank" href="https://irishrocknrollmuseum.com/"><li>Irish Rock Mueseum</li></a>
-            </ul>
+          <h3 id="question">Template question?</h3>
         </div>
+        <!--Answers to be loaded in by javascript-->
+        <div id="answers">
+          <ul id="answer-container">
+            <a class="answer" href="#"><li>Answer 1</li></a>
+            <a class="answer" href="#"><li>Answer 2</li></a>
+            <a class="answer" href="#"><li>Answer 3</li></a>
+            <a class="answer" href="#"><li>Answer 4</li></a>
+          </ul>
+        </div>
+
+        <div>
+          <h3 id="correct-answers">Correct Answers: 0</h3>
+        </div>
+        <div>
+          <h3 id="lives">Lives: 3</h3>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <div>
+        <ul>
+          <a target="_blank" href="https://github.com/Roger-ODonnell"
+            ><li>My Github</li></a
+          >
+          <a target="_blank" href="https://irishrocknrollmuseum.com/"
+            ><li>Irish Rock Mueseum</li></a
+          >
+        </ul>
+      </div>
     </footer>
     <script src="/script.js"></script>
-</body>
+  </body>
 </html>

@@ -1,35 +1,43 @@
 let lives = 3;
-let livesElement = document.getElementById("lives");
 let correctAnswers = 0;
+let livesElement = document.getElementById("lives");
 let correctAnswersElement = document.getElementById("correct-answers");
 
 livesElement.innerHTML = `Lives: ${lives}`;
 correctAnswersElement.innerHTML = `Correct Answers: ${correctAnswers}`;
 
-function randomQuestion(){
-    let question = document.getElementById("question");
-    question.innerHTML = "What famous Irish band was phil Lynott in?" //Question object, array of question objects??
+let questionObj = {
+  question: "What famous Irish band was phil Lynott in?",
+  answer: "Thin lizzy",
+};
 
-    let randomAnswers = ["Thin lizzy", "Def Leopard", "The Dubliners", "U2", "Fish", "Cow"];
-    let answersContainer = document.getElementsByClassName("answer");
-    let randAnswers = [];
+function randomQuestion(questionObj) {
+  let question = document.getElementById("question");
+  question.innerHTML = `${questionObj.question}`;
 
-    for (let i = 0; i < answersContainer.length; i++) {
-        let randInt = Math.floor((Math.random() * randomAnswers.length));
-        let answer = randomAnswers[randInt];
+  let answerElements = document.getElementsByClassName("answer");
 
-        if (randAnswers.includes(answer)){
-            i--;
-            continue;
-        }else{
-            answersContainer[i].innerHTML = `<li>${answer}</li>`;
-            randAnswers.push(answer);
-        }
+  let randomAnswers = ["Def Leopard", "The Dubliners", "U2", "Fish", "Cow"];
+
+  if (!randomAnswers.includes(questionObj.answer)) {
+    randomAnswers.push(questionObj.answer);
+  }
+
+  let answersSelected = [];
+  //Add random answers to answersSelected Array
+  for (i = 0; i < answerElements.length; i++) {
+    let randInt = Math.floor(Math.random() * randomAnswers.length);
+    if (answersSelected.includes(randomAnswers[randInt])) {
+      i--;
+      continue;
+    } else {
+      answersSelected.push(randomAnswers[randInt]);
     }
+  }
+  //Populate HTML Answer buttons with generated answers
+  for (i = 0; i < answersSelected.length; i++){
+    answerElements[i].innerHTML = `<li>${answersSelected[i]}</li>`;
+  }
 }
 
-function answer(){
-    
-}
-
-randomQuestion();
+randomQuestion(questionObj);
