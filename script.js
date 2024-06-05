@@ -19,11 +19,8 @@ function randomQuestion(questionObj) {
 
   let randomAnswers = ["Def Leopard", "The Dubliners", "U2", "Fish", "Cow"];
 
-  if (!randomAnswers.includes(questionObj.answer)) {
-    randomAnswers.push(questionObj.answer);
-  }
-
   let answersSelected = [];
+
   //Add random answers to answersSelected Array
   for (i = 0; i < answerElements.length; i++) {
     let randInt = Math.floor(Math.random() * randomAnswers.length);
@@ -34,8 +31,12 @@ function randomQuestion(questionObj) {
       answersSelected.push(randomAnswers[randInt]);
     }
   }
+
+  let randomIndex = Math.floor(Math.random() * answerElements.length);
+  answersSelected.splice(randomIndex, 0, questionObj.answer);
+
   //Populate HTML Answer buttons with generated answers
-  for (i = 0; i < answersSelected.length; i++){
+  for (i = 0; i < answersSelected.length; i++) {
     answerElements[i].innerHTML = `<li>${answersSelected[i]}</li>`;
   }
 }
