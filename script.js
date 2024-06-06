@@ -2,12 +2,15 @@ let lives = 3;
 let correctAnswers = 0;
 let livesElement = document.getElementById("lives");
 let correctAnswersElement = document.getElementById("correct-answers");
+let questionCounter = 0; //user defined amount updated er question
 
 //question object to populate new questions and answers
 let questionObj = {
   question: "What famous Irish band was phil Lynott in?",
   answer: "Thin lizzy",
+  potentialAnswer: ["", ""]
 };
+
 //function to generate a random question in base html elements
 function randomQuestion(questionObj) {
   let question = document.getElementById("question");
@@ -16,13 +19,13 @@ function randomQuestion(questionObj) {
   //variable to house answer elements
   let answerElements = document.getElementsByClassName("answer");
 
-  //random answers array to populate other 3 answer slots 
+  //random answers array to populate other 3 answer slots
   let randomAnswers = ["Def Leopard", "The Dubliners", "U2", "Fish", "Cow"];
   //array of answers selected for player to chose from
   let answersSelected = [];
 
   //Add random answers to answersSelected Array
-  for (i = 0; i < answerElements.length; i++) {
+  for (let i = 0; i < answerElements.length; i++) {
     let randInt = Math.floor(Math.random() * randomAnswers.length);
     if (answersSelected.includes(randomAnswers[randInt])) {
       i--;
@@ -37,24 +40,31 @@ function randomQuestion(questionObj) {
   answersSelected.splice(randomIndex, 0, questionObj.answer);
 
   //Populate HTML Answer buttons with generated answers
-  for (i = 0; i < answersSelected.length; i++) {
-    answerElements[i].innerHTML = `<li>${answersSelected[i]}</li>`;
+  for (let i = 0; i < answersSelected.length - 1; i++) {
+    answerElements[i].innerHTML = `<li >${answersSelected[i]}</li>`;
   }
+  //event listener
 }
 
 //update the lives and right questions counters to give the player feedback
-function updateCounters(){
-  livesElement.innerHTML = `Lives: ${lives}`;
-  correctAnswersElement.innerHTML = `Correct Answers: ${correctAnswers}`;
+function updateCounters() {}
+
+function correct() {
+  console.log("Correct");
 }
 
-function correct(){
-    console.log("Correct");
-}
-
-function inCorrect(){
+function inCorrect() {
   console.log("Wrong");
 }
 
-randomQuestion(questionObj);
-updateCounters();
+function startGame() {
+  //easy,medium , hard - dropdown, 
+
+  //Name input
+  livesElement.innerHTML = `Lives: ${lives}`;
+  correctAnswersElement.innerHTML = `Correct Answers: ${correctAnswers}`;
+
+  randomQuestion(questionObj);
+}
+
+startGame(); //called on button press

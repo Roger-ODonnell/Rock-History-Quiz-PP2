@@ -1,204 +1,232 @@
-@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
 
-body{
-    background-color: #6E4980;
-    color: white;
-    font-family: "RocknRoll One", sans-serif;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    min-height: 100vh;
-    min-width: 100vw;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-h1{
-    text-align: center;
-    background-image: url(/asset/images/rock-banner.jpeg);
-    padding: 1rem 5em;
-    background-position: 0;
-    margin-top: 0;
-}
-h2{
-    text-align: center;
-}
-#home-h2{
-    margin-top: 5rem;
+body {
+  background-color: #6e4980;
+  color: white;
+  font-family: "RocknRoll One", sans-serif;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.center{
-    text-align: center;
+h1 {
+  text-align: center;
+  background-image: url(/asset/images/rock-banner.jpeg);
+  padding: 1rem 5em;
+  background-position: 0;
+  margin-top: 0;
+}
+h2 {
+  text-align: center;
+}
+#home-h2 {
+  margin-top: 5rem;
 }
 
-#start-button{
-    margin-top: 10rem;
-    padding: 2rem 3rem;
-    background-color: #452255;
-    color: white;
-    font-size: 70PX;
-    font-weight: bold;
-    border-radius: 1rem;
-    border-color: #391e45;
-}
-#start-button:hover{
-    background-color: #6a3a80;
-    transform: scale(1.2);
+.center {
+  text-align: center;
 }
 
-#start-again{
-    margin-left: 2rem;
+#start-button {
+  margin-top: 10rem;
+  padding: 2rem 3rem;
+  background-color: #452255;
+  color: white;
+  font-size: 70px;
+  font-weight: bold;
+  border-radius: 1rem;
+  border-color: #391e45;
 }
-#start-again button{
-    padding: 1rem 1rem;
-    background-color: #270C33;
-    border-radius: 1rem;
-    font-family: "RocknRoll One", sans-serif;
-    color: white;
+#start-button:hover {
+  background-color: #6a3a80;
+  transform: scale(1.2);
+}
+
+#start-again {
+  margin-left: 2rem;
+}
+#start-again button {
+  padding: 1rem 1rem;
+  background-color: #270c33;
+  border-radius: 1rem;
+  font-family: "RocknRoll One", sans-serif;
+  color: white;
+  font-size: 20px;
+  border-color: transparent;
+  background-position: 0px;
+}
+#start-again button:hover {
+  transform: scale(1.2);
+}
+#name {
+  text-align: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+#name input {
+  padding: 1rem 1rem;
+  text-align: center;
+  font-size: 25px;
+}
+#name-label {
     font-size: 20px;
-    border-color: transparent;
-    background-position: 0px;
+    margin-right: 2rem;
 }
-#start-again button:hover{
-    transform: scale(1.2);
-}
-
-#quiz{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 1rem;
-    padding-bottom: 5rem;
-}
-#quiz h3{
-    font-size: 30px;
-}
-#answers ul{
-    display: flex;
-    justify-content: center;  
-    align-items: center;
-    list-style-type: none;
-    gap: 1rem;  
-}
-#answers li{
-    padding: 2rem 2rem;
-    background-color: #CEBFD5;
-    border-radius: 1rem;
-}
-#answers a{
-    color: black;
-    text-decoration: none;
-}
-#answers li:hover{
-    transform: scale(1.2);
-    color: white;
-    background-color: #452255;
-}
-
-footer{ 
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-    background-image: url(/asset/images/rock-banner.jpeg);
+#difficulty-selection{
+    font-size: large;
     padding: 1rem 2rem;
+}
+#difficulty-label{
+    font-size: large;
+}
+
+#quiz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+  padding-bottom: 5rem;
+}
+#quiz h3 {
+  font-size: 30px;
+}
+#answers ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  gap: 1rem;
+}
+#answers li {
+  padding: 2rem 2rem;
+  background-color: #cebfd5;
+  border-radius: 1rem;
+}
+#answers a {
+  color: black;
+  text-decoration: none;
+}
+#answers li:hover {
+  transform: scale(1.2);
+  color: white;
+  background-color: #452255;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  background-image: url(/asset/images/rock-banner.jpeg);
+  padding: 1rem 2rem;
+  font-size: 20px;
+  margin-top: auto;
+}
+footer ul {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  list-style-type: none;
+  gap: 5rem;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer a:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 432px) {
+  footer a {
+    font-size: 14px;
+  }
+
+  #quiz h3 {
     font-size: 20px;
-    margin-top: auto;
-}
-footer ul{
+  }
+
+  body {
+    width: 100vw;
+  }
+
+  #answers ul {
+    max-width: 100%;
+    width: 100vw;
     display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    text-align: center;     
-    list-style-type: none;
-    gap: 5rem;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  #start-again button {
+    padding: 0.5rem;
+    margin: 0;
+    text-align: left;
+    margin-left: -1rem;
+  }
+
+  #name input {
+    text-align: center;
+    font-size: 20px;
+  }
+  #name-label {
+    font-size: 20px;
+  }
 }
-footer a{
-    color: white;
-    text-decoration: none;
-}
-footer a:hover{
-    transform: scale(1.2);
-}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
+  #home-h2 {
+    padding: 0 1rem;
+  }
 
-@media screen and (max-width: 432px){
-    footer a{
-        font-size: 14px;
-    }
+  #start-button {
+    font-size: 50px;
+    padding: 1rem 1rem;
+    margin-top: 4rem;
+  }
 
-    #quiz h3{
-        font-size: 20px;
-    }
+  footer {
+    font-size: 14px;
+  }
 
-    body{
-        width: 100vw;
-    }
+  ul {
+    margin-right: 5rem;
+    margin-bottom: 0rem;
+  }
 
-    #answers ul{
-        max-width: 100%;
-        width: 100vw;
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
+  #answers ul {
+    max-width: 100%;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
 
-    #start-again button{
-        padding: .5rem;
-        margin: 0;
-        text-align: left;
-        margin-left: -1rem;
-    }
-
-}
-@media screen and (max-width: 768px){
-    h1{
-        font-size: 20px;
-    }
-    #home-h2{
-        padding: 0 1rem;
-    }
-
-    #start-button{
-        font-size: 50px;
-        padding: 1rem 1rem;
-        margin-top: 4rem;
-    }
-
-    footer{
-        font-size: 14px;
-    }
-
-    ul{
-        margin-right: 5rem;
-        margin-bottom: 0rem;
-    }
-
-    #answers ul{
-        max-width: 100%;
-        width: 100vw;
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
-
-    #start-again button{
-        padding: .5rem;
-        margin: 0;
-        text-align: left;
-        margin-left: -1rem;
-    }
+  #start-again button {
+    padding: 0.5rem;
+    margin: 0;
+    text-align: left;
+    margin-left: -1rem;
+  }
 }
