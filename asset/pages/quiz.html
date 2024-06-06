@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!--Start of head-->
   <head>
     <!--meta tag keywords-->
     <meta name="keywords" content="quiz, rock, music, fun" />
@@ -20,11 +21,13 @@
     <!--Page title-->
     <title>Homepage</title>
   </head>
+    <!--End of head-->
+   <!--Start of Body-->
   <body>
     <header>
       <h1>Great Irish Rock Quiz</h1>
     </header>
-
+     <!--Start of Main-->
     <main>
       <div id="start-again">
         <button onclick="location.href = '/index.html'">Start Again?</button>
@@ -37,13 +40,14 @@
         <!--Answers to be loaded in by javascript-->
         <div id="answers">
           <ul id="answer-container">
-            <a class="answer" href="#"><li>Answer 1</li></a>
-            <a class="answer" href="#"><li>Answer 2</li></a>
-            <a class="answer" href="#"><li>Answer 3</li></a>
-            <a class="answer" href="#"><li>Answer 4</li></a>
+            <!--Change to button instead of a-->
+            <a class="answer" onclick="correct()"><li>Answer 1</li></a>
+            <a class="answer" onclick="inCorrect()"><li>Answer 2</li></a>
+            <a class="answer" onclick="correct()"><li>Answer 3</li></a>
+            <a class="answer" onclick="correct()"><li>Answer 4</li></a>
           </ul>
         </div>
-
+        <!--Correct answer and lives display div-->
         <div>
           <h3 id="correct-answers">Correct Answers: 0</h3>
         </div>
@@ -52,7 +56,8 @@
         </div>
       </section>
     </main>
-
+    <!--End of Main-->
+    <!--Start of footer-->
     <footer id="footer">
       <div>
         <ul>
@@ -63,8 +68,10 @@
             ><li>Irish Rock Mueseum</li></a
           >
         </ul>
-      </div>
+      </div>  
     </footer>
+     <!--End of footer-->
+     <!--Link to javaScript file to be loaded after page-->
     <script src="/script.js"></script>
   </body>
 </html>

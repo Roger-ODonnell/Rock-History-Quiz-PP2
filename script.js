@@ -48,5 +48,13 @@ function updateCounters(){
   correctAnswersElement.innerHTML = `Correct Answers: ${correctAnswers}`;
 }
 
+function correct(){
+    console.log("Correct");
+}
+
+function inCorrect(){
+  console.log("Wrong");
+}
+
 randomQuestion(questionObj);
 updateCounters();
