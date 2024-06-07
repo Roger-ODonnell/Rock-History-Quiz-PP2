@@ -1,15 +1,10 @@
+import { easyQuestionList } from "./questions.js";
+
 let lives = 3;
 let correctAnswers = 0;
 let livesElement = document.getElementById("lives");
 let correctAnswersElement = document.getElementById("correct-answers");
 let questionCounter = 0; //user defined amount updated er question
-
-//question object to populate new questions and answers
-let questionObj = {
-  question: "What famous Irish band was phil Lynott in?",
-  answer: "Thin lizzy",
-  potentialAnswer: ["", ""]
-};
 
 //function to generate a random question in base html elements
 function randomQuestion(questionObj) {
@@ -20,18 +15,18 @@ function randomQuestion(questionObj) {
   let answerElements = document.getElementsByClassName("answer");
 
   //random answers array to populate other 3 answer slots
-  let randomAnswers = ["Def Leopard", "The Dubliners", "U2", "Fish", "Cow"];
+  ////let randomAnswers = ["Def Leopard", "The Dubliners", "U2", "Fish", "Cow"];
   //array of answers selected for player to chose from
   let answersSelected = [];
 
   //Add random answers to answersSelected Array
   for (let i = 0; i < answerElements.length; i++) {
-    let randInt = Math.floor(Math.random() * randomAnswers.length);
-    if (answersSelected.includes(randomAnswers[randInt])) {
+    let randInt = Math.floor(Math.random() * questionObj.potentialAnswer.length);
+    if (answersSelected.includes( questionObj.potentialAnswer[randInt])) {
       i--;
       continue;
     } else {
-      answersSelected.push(randomAnswers[randInt]);
+      answersSelected.push( questionObj.potentialAnswer[randInt]);
     }
   }
 
@@ -45,9 +40,6 @@ function randomQuestion(questionObj) {
   }
   //event listener
 }
-
-//update the lives and right questions counters to give the player feedback
-function updateCounters() {}
 
 function correct() {
   console.log("Correct");
@@ -64,7 +56,12 @@ function startGame() {
   livesElement.innerHTML = `Lives: ${lives}`;
   correctAnswersElement.innerHTML = `Correct Answers: ${correctAnswers}`;
 
-  randomQuestion(questionObj);
+  randomQuestion(easyQuestionList[randInt(easyQuestionList)]);
+  console.log("Started");
 }
 
+
+function randInt (obj){
+ return Math.floor(Math.random() * obj.length)
+}
 startGame(); //called on button press
