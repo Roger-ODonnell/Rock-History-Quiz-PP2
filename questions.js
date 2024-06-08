@@ -6,7 +6,7 @@ export let easyQuestionList = [
   },
   {
     question: "What famous Irish band was Rory Gallagher in?",
-    answer: "Thin lizzy",
+    answer: "The Rory Gallagher Band",
     potentialAnswer: ["Def Leopard", "The Dubliners", "U2", "Fish", "Cow"],
   },
 ];

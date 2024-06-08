@@ -4,59 +4,70 @@ let lives = 3;
 let correctAnswers = 0;
 let livesElement = document.getElementById("lives");
 let correctAnswersElement = document.getElementById("correct-answers");
-let questionCounter = 0; //user defined amount updated per question
+let questionCounter = 0;
 
 correctAnswersElement.innerHTML = `Correct Answers: ${correctAnswers}`;
 livesElement.innerHTML = `Lives: ${lives}`;
-randomQuestion(easyQuestionList[randInt(easyQuestionList)]);
 
-//function to generate a random question in base html elements
+
+// Start the quiz or Load the next random question
+function QuizLoad() {
+  randomQuestion(easyQuestionList[Math.floor(Math.random() * easyQuestionList.length)]);
+}
+
 function randomQuestion(questionObj) {
   let question = document.getElementById("question");
   question.innerHTML = `${questionObj.question}`;
 
-  //variable to house answer elements
   let answerElements = document.getElementsByClassName("answer");
 
-  //array of answers selected for player to chose from
   let answersSelected = [];
 
-  //Add random answers to answersSelected Array
-  for (let i = 0; i < answerElements.length; i++) {
-    if (
-      answersSelected.includes(
-        questionObj.potentialAnswer[randInt(questionObj.potentialAnswer)]
-      )
-    ) {
-      i--;
-      continue;
-    } else {
-      answersSelected.push(
-        questionObj.potentialAnswer[randInt(questionObj.potentialAnswer)]
-      );
+  // While loop to ensure random Answers are added
+  while (answersSelected.length < answerElements.length - 1) {
+    let randomInt = Math.floor(Math.random() * questionObj.potentialAnswer.length);
+    if (!answersSelected.includes(questionObj.potentialAnswer[randomInt])) {
+      answersSelected.push(questionObj.potentialAnswer[randomInt]);
     }
   }
 
-  //Add the right answer into a random slot in the answer elements
-  let randomIndex = Math.floor(Math.random() * answerElements.length);
-  answersSelected.splice(randomIndex, 0, questionObj.answer);
+  // Add the correct answer into a random slot in the answer elements
+  answersSelected.splice(Math.floor(Math.random() * (answersSelected.length + 1)), 0, questionObj.answer);
 
-  //Populate HTML Answer buttons with generated answers
-  for (let i = 0; i < answersSelected.length - 1; i++) {
-    answerElements[i].innerHTML = `<li >${answersSelected[i]}</li>`;
+  // Add Generated Answers to Answer Elements
+  for (let i = 0; i < answerElements.length; i++) {
+    answerElements[i].innerHTML = `<li>${answersSelected[i]}</li>`;
+    //Add a click function to answer buttons to allow them to be checked for correct answer
+    answerElements[i].onclick = function() {
+      checkAnswer(answersSelected[i], questionObj.answer);
+    };
+  }
+}
+
+function checkAnswer(selectedAnswer, correctAnswer) {
+  if (selectedAnswer === correctAnswer) {
+    correct();
+  } else {
+    inCorrect();
   }
 }
 
 function correct() {
-  console.log("Correct");
   questionCounter++;
+  correctAnswers++;
+  correctAnswersElement.innerHTML = `Correct Answers: ${correctAnswers}`;
+  nextQuestion();
 }
 
 function inCorrect() {
-  console.log("Wrong");
   lives--;
+  livesElement.innerHTML = `Lives: ${lives}`;
+  if (lives > 0) {
+    nextQuestion();
+  } else {
+    location.href = "/asset/pages/loser.html";
+  }
 }
 
-function randInt(obj) {
-  return Math.floor(Math.random() * obj.length);
-}
+// Start the game
+QuizLoad();
