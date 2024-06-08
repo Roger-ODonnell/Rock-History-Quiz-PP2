@@ -56,14 +56,14 @@ function correct() {
   questionCounter++;
   correctAnswers++;
   correctAnswersElement.innerHTML = `Correct Answers: ${correctAnswers}`;
-  nextQuestion();
+  QuizLoad();
 }
 
 function inCorrect() {
   lives--;
   livesElement.innerHTML = `Lives: ${lives}`;
   if (lives > 0) {
-    nextQuestion();
+    QuizLoad();
   } else {
     location.href = "/asset/pages/loser.html";
   }
