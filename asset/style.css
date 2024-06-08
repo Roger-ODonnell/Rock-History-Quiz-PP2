@@ -109,9 +109,11 @@ h2 {
   background-color: #cebfd5;
   border-radius: 1rem;
 }
-#answers a {
+#answers button {
   color: black;
   text-decoration: none;
+  background-color: transparent;
+  border: transparent;
 }
 #answers li:hover {
   transform: scale(1.2);
