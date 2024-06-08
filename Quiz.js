@@ -1,4 +1,6 @@
 import { easyQuestionList } from "./questions.js";
+import { normalQuestionList } from "./questions.js";
+import { hardQuestionList } from "./questions.js";
 
 let lives = 3;
 let correctAnswers = 0;
@@ -12,7 +14,17 @@ livesElement.innerHTML = `Lives: ${lives}`;
 
 // Start the quiz or Load the next random question
 function QuizLoad() {
-  randomQuestion(easyQuestionList[Math.floor(Math.random() * easyQuestionList.length)]);
+  let difficulty = localStorage.getItem("difficulty");
+  console.log(difficulty);
+
+  if (difficulty === "Easy"){
+    randomQuestion(easyQuestionList[Math.floor(Math.random() * easyQuestionList.length)]);
+  }else if (difficulty === "Normal"){
+    randomQuestion(normalQuestionList[Math.floor(Math.random() * normalQuestionList.length)]);
+  }
+  else if (difficulty === "Hard"){
+    randomQuestion(hardQuestionList[Math.floor(Math.random() * hardQuestionList.length)]);
+  }
 }
 
 function randomQuestion(questionObj) {
@@ -36,7 +48,7 @@ function randomQuestion(questionObj) {
 
   // Add Generated Answers to Answer Elements
   for (let i = 0; i < answerElements.length; i++) {
-    answerElements[i].innerHTML = `<li>${answersSelected[i]}</li>`;
+    answerElements[i].innerHTML = `<li><span class="button-text">${answersSelected[i]}</span</li>`;
     //Add a click function to answer buttons to allow them to be checked for correct answer
     answerElements[i].onclick = function() {
       checkAnswer(answersSelected[i], questionObj.answer);
@@ -71,3 +83,5 @@ function inCorrect() {
 
 // Start the game
 QuizLoad();
+
+

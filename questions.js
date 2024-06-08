@@ -25,32 +25,21 @@ export let easyQuestionList = [
     potentialAnswer: ["Megadeth", "Slayer", "Anthrax", "Pantera", "Iron Maiden"],
   }
 ];
-//Pop item once used
 
-export let mediumQuestionList = [
+export let normalQuestionList = [
   {
-    question: "What famous Irish band was phil Lynott in?",
-    answer: "Thin lizzy",
-    potentialAnswer: ["", ""],
+    question: "Who was the original lead singer of the band AC/DC?",
+    answer: "Bon Scott",
+    potentialAnswer: ["Brian Johnson", "Phil Rudd", "Cliff Williams", "Angus Young", "Malcolm Young"],
   },
   {
-    question: "What famous Irish band was phil Lynott in?",
-    answer: "Thin lizzy",
-    potentialAnswer: ["", ""],
-  },
+    question: "Which American rock band released the album 'Appetite for Destruction'?",
+    answer: "Guns N Roses",
+    potentialAnswer: ["Motley Crue", "Aerosmith", "Van Halen", "Def Leppard", "Bon Jovi"],
+  }
 ];
 
 export let hardQuestionList = [
-  {
-    question: "What famous Irish band was phil Lynott in?",
-    answer: "Thin lizzy",
-    potentialAnswer: ["", ""],
-  },
-  {
-    question: "What famous Irish band was phil Lynott in?",
-    answer: "Thin lizzy",
-    potentialAnswer: ["", ""],
-  },
   {
     question: "Which rock band had hits like 'Smells Like Teen Spirit' and 'Come As You Are'?",
     answer: "Nirvana",
@@ -68,17 +57,7 @@ export let hardQuestionList = [
   },
   {
     question: "Which album by The Beatles is often considered one of the greatest of all time and features songs like 'A Day in the Life' and 'Lucy in the Sky with Diamonds'?",
-    answer: "Sgt. Pepper's Lonely Hearts Club Band",
+    answer: "Sgt. Peppers Lonely Hearts Club Band",
     potentialAnswer: ["Abbey Road", "Revolver", "The White Album", "Rubber Soul", "Let It Be"],
-  },
-  {
-    question: "Who was the original lead singer of the band AC/DC?",
-    answer: "Bon Scott",
-    potentialAnswer: ["Brian Johnson", "Phil Rudd", "Cliff Williams", "Angus Young", "Malcolm Young"],
-  },
-  {
-    question: "Which American rock band released the album 'Appetite for Destruction'?",
-    answer: "Guns N' Roses",
-    potentialAnswer: ["Motley Crue", "Aerosmith", "Van Halen", "Def Leppard", "Bon Jovi"],
   }
 ];
