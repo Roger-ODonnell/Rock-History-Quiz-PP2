@@ -4,7 +4,11 @@ let lives = 3;
 let correctAnswers = 0;
 let livesElement = document.getElementById("lives");
 let correctAnswersElement = document.getElementById("correct-answers");
-let questionCounter = 0; //user defined amount updated er question
+let questionCounter = 0; //user defined amount updated per question
+
+correctAnswersElement.innerHTML = `Correct Answers: ${correctAnswers}`;
+livesElement.innerHTML = `Lives: ${lives}`;
+randomQuestion(easyQuestionList[randInt(easyQuestionList)]);
 
 //function to generate a random question in base html elements
 function randomQuestion(questionObj) {
@@ -14,19 +18,22 @@ function randomQuestion(questionObj) {
   //variable to house answer elements
   let answerElements = document.getElementsByClassName("answer");
 
-  //random answers array to populate other 3 answer slots
-  ////let randomAnswers = ["Def Leopard", "The Dubliners", "U2", "Fish", "Cow"];
   //array of answers selected for player to chose from
   let answersSelected = [];
 
   //Add random answers to answersSelected Array
   for (let i = 0; i < answerElements.length; i++) {
-    let randInt = Math.floor(Math.random() * questionObj.potentialAnswer.length);
-    if (answersSelected.includes( questionObj.potentialAnswer[randInt])) {
+    if (
+      answersSelected.includes(
+        questionObj.potentialAnswer[randInt(questionObj.potentialAnswer)]
+      )
+    ) {
       i--;
       continue;
     } else {
-      answersSelected.push( questionObj.potentialAnswer[randInt]);
+      answersSelected.push(
+        questionObj.potentialAnswer[randInt(questionObj.potentialAnswer)]
+      );
     }
   }
 
@@ -38,30 +45,18 @@ function randomQuestion(questionObj) {
   for (let i = 0; i < answersSelected.length - 1; i++) {
     answerElements[i].innerHTML = `<li >${answersSelected[i]}</li>`;
   }
-  //event listener
 }
 
 function correct() {
   console.log("Correct");
+  questionCounter++;
 }
 
 function inCorrect() {
   console.log("Wrong");
+  lives--;
 }
 
-function startGame() {
-  //easy,medium , hard - dropdown, 
-
-  //Name input
-  livesElement.innerHTML = `Lives: ${lives}`;
-  correctAnswersElement.innerHTML = `Correct Answers: ${correctAnswers}`;
-
-  randomQuestion(easyQuestionList[randInt(easyQuestionList)]);
-  console.log("Started");
+function randInt(obj) {
+  return Math.floor(Math.random() * obj.length);
 }
-
-
-function randInt (obj){
- return Math.floor(Math.random() * obj.length)
-}
-startGame(); //called on button press
