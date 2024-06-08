@@ -1,30 +1,35 @@
-import { easyQuestionList } from "./questions.js";
-import { normalQuestionList } from "./questions.js";
-import { hardQuestionList } from "./questions.js";
+import {
+  easyQuestionList,
+  normalQuestionList,
+  hardQuestionList,
+} from "./questions.js";
 
 let lives = 3;
 let correctAnswers = 0;
 let livesElement = document.getElementById("lives");
 let correctAnswersElement = document.getElementById("correct-answers");
 let questionCounter = 0;
+let questionObjIndex;
+let currentQuestionList;
 
 correctAnswersElement.innerHTML = `Correct Answers: ${correctAnswers}`;
 livesElement.innerHTML = `Lives: ${lives}`;
-
 
 // Start the quiz or Load the next random question
 function QuizLoad() {
   let difficulty = localStorage.getItem("difficulty");
   console.log(difficulty);
 
-  if (difficulty === "Easy"){
-    randomQuestion(easyQuestionList[Math.floor(Math.random() * easyQuestionList.length)]);
-  }else if (difficulty === "Normal"){
-    randomQuestion(normalQuestionList[Math.floor(Math.random() * normalQuestionList.length)]);
+  if (difficulty === "Easy") {
+    currentQuestionList = easyQuestionList;
+  } else if (difficulty === "Normal") {
+    currentQuestionList = normalQuestionList;
+  } else if (difficulty === "Hard") {
+    currentQuestionList = hardQuestionList;
   }
-  else if (difficulty === "Hard"){
-    randomQuestion(hardQuestionList[Math.floor(Math.random() * hardQuestionList.length)]);
-  }
+
+  questionObjIndex = Math.floor(Math.random() * currentQuestionList.length);
+  randomQuestion(currentQuestionList[questionObjIndex]);
 }
 
 function randomQuestion(questionObj) {
@@ -37,20 +42,28 @@ function randomQuestion(questionObj) {
 
   // While loop to ensure random Answers are added
   while (answersSelected.length < answerElements.length - 1) {
-    let randomInt = Math.floor(Math.random() * questionObj.potentialAnswer.length);
+    let randomInt = Math.floor(
+      Math.random() * questionObj.potentialAnswer.length
+    );
     if (!answersSelected.includes(questionObj.potentialAnswer[randomInt])) {
       answersSelected.push(questionObj.potentialAnswer[randomInt]);
     }
   }
 
   // Add the correct answer into a random slot in the answer elements
-  answersSelected.splice(Math.floor(Math.random() * (answersSelected.length + 1)), 0, questionObj.answer);
+  answersSelected.splice(
+    Math.floor(Math.random() * (answersSelected.length + 1)),
+    0,
+    questionObj.answer
+  );
 
   // Add Generated Answers to Answer Elements
   for (let i = 0; i < answerElements.length; i++) {
-    answerElements[i].innerHTML = `<li><span class="button-text">${answersSelected[i]}</span</li>`;
+    answerElements[
+      i
+    ].innerHTML = `<li><span class="button-text">${answersSelected[i]}</span></li>`;
     //Add a click function to answer buttons to allow them to be checked for correct answer
-    answerElements[i].onclick = function() {
+    answerElements[i].onclick = function () {
       checkAnswer(answersSelected[i], questionObj.answer);
     };
   }
@@ -68,13 +81,23 @@ function correct() {
   questionCounter++;
   correctAnswers++;
   correctAnswersElement.innerHTML = `Correct Answers: ${correctAnswers}`;
+
+  currentQuestionList.splice(questionObjIndex, 1);
+  if (currentQuestionList.length <= 0) {
+    location.href = "/asset/pages/loser.html";//Out of questions Page
+  }
   QuizLoad();
 }
 
 function inCorrect() {
   lives--;
   livesElement.innerHTML = `Lives: ${lives}`;
+
   if (lives > 0) {
+    currentQuestionList.splice(questionObjIndex, 1);
+    if (currentQuestionList.length <= 0) {
+      location.href = "/asset/pages/loser.html";//Out of questions Page
+    }
     QuizLoad();
   } else {
     location.href = "/asset/pages/loser.html";
@@ -83,5 +106,3 @@ function inCorrect() {
 
 // Start the game
 QuizLoad();
-
-
