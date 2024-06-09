@@ -10,7 +10,7 @@ export let easyQuestionList = [
     potentialAnswer: ["Gibson", "Ibanez", "Harley Benton", "PRS", "Schecter", "Gretsch"],
   },
   {
-    question: "Which legendary British rock band released the album 'Dark Side of the Moon'?",
+    question: "Which legendary British rock band released the album 'Dark Side of the Moon?",
     answer: "Pink Floyd",
     potentialAnswer: ["Led Zeppelin", "The Rolling Stones", "The Beatles", "Black Sabbath", "Queen"],
   },
@@ -20,22 +20,22 @@ export let easyQuestionList = [
     potentialAnswer: ["Jimmy Page", "Eddie Van Halen", "Kirk Hammett", "Dave Mustaine", "Angus Young"],
   },
   {
-    question: "What American band released the albums 'Master of Puppets' and 'Metallica'?",
+    question: "What American band released the albums 'Master of Puppets' and 'Metallica?",
     answer: "Metallica",
     potentialAnswer: ["Megadeth", "Slayer", "Anthrax", "Pantera", "Iron Maiden"],
   },
   {
-    question: "Which band is known for the hit song 'Sweet Child o' Mine'?",
+    question: "Which band is known for the hit song 'Sweet Child o' Mine?",
     answer: "Guns N' Roses",
     potentialAnswer: ["Aerosmith", "Bon Jovi", "Queen", "Journey", "Def Leppard"],
   },
   {
-    question: "Which band is known for the song 'Hotel California'?",
+    question: "Which band is known for the song 'Hotel California?",
     answer: "Eagles",
     potentialAnswer: ["Fleetwood Mac", "The Doors", "The Beach Boys", "The Byrds", "Creedence Clearwater Revival"],
   },
   {
-    question: "Which member of The Beatles was known as the 'Quiet Beatle'?",
+    question: "Which member of The Beatles was known as the 'Quiet Beatle?",
     answer: "George Harrison",
     potentialAnswer: ["John Lennon", "Paul McCartney", "Ringo Starr", "Pete Best", "Stuart Sutcliffe"],
   }
@@ -49,12 +49,12 @@ export let normalQuestionList = [
     potentialAnswer: ["Brian Johnson", "Phil Rudd", "Cliff Williams", "Angus Young", "Malcolm Young"],
   },
   {
-    question: "Which American rock band released the album 'Appetite for Destruction'?",
+    question: "Which American rock band released the album 'Appetite for Destruction?",
     answer: "Guns N Roses",
     potentialAnswer: ["Motley Crue", "Aerosmith", "Van Halen", "Def Leppard", "Bon Jovi"],
   },
   {
-    question: "Which band is known for the song 'Stairway to Heaven'?",
+    question: "Which band is known for the song 'Stairway to Heaven?",
     answer: "Led Zeppelin",
     potentialAnswer: ["Black Sabbath", "Deep Purple", "Queen", "Pink Floyd", "The Who"],
   },
@@ -64,7 +64,7 @@ export let normalQuestionList = [
     potentialAnswer: ["David Bowie", "Mick Jagger", "Robert Plant", "Steven Tyler", "Axl Rose"],
   },
   {
-    question: "Which rock band is known for the hit song 'Don't Stop Believin''?",
+    question: "Which rock band is known for the hit song 'Don't Stop Believin?",
     answer: "Journey",
     potentialAnswer: ["Foreigner", "REO Speedwagon", "Styx", "Kansas", "Boston"],
   }
@@ -73,7 +73,7 @@ export let normalQuestionList = [
 
 export let hardQuestionList = [
   {
-    question: "Which rock band had hits like 'Smells Like Teen Spirit' and 'Come As You Are'?",
+    question: "Which rock band had hits like 'Smells Like Teen Spirit' and 'Come As You Are?",
     answer: "Nirvana",
     potentialAnswer: ["Pearl Jam", "Soundgarden", "Alice in Chains", "Foo Fighters", "Red Hot Chili Peppers"],
   },
@@ -83,12 +83,12 @@ export let hardQuestionList = [
     potentialAnswer: ["John Bonham", "Ringo Starr", "Charlie Watts", "Neil Peart", "Travis Barker"],
   },
   {
-    question: "Which American rock band released the album 'Californication'?",
+    question: "Which American rock band released the album 'Californication?",
     answer: "Red Hot Chili Peppers",
     potentialAnswer: ["Pearl Jam", "Foo Fighters", "Nirvana", "Soundgarden", "Alice in Chains"],
   },
   {
-    question: "Which album by The Beatles is often considered one of the greatest of all time and features songs like 'A Day in the Life' and 'Lucy in the Sky with Diamonds'?",
+    question: "Which album by The Beatles is often considered one of the greatest of all time and features songs like 'A Day in the Life' and 'Lucy in the Sky with Diamonds?",
     answer: "Sgt. Peppers Lonely Hearts Club Band",
     potentialAnswer: ["Abbey Road", "Revolver", "The White Album", "Rubber Soul", "Let It Be"],
   },
@@ -98,13 +98,17 @@ export let hardQuestionList = [
     potentialAnswer: ["The Who", "Cream", "The Beatles", "The Rolling Stones", "Pink Floyd"],
   },
   {
-    question: "Which band released the song 'Bohemian Rhapsody'?",
+    question: "Which band released the song 'Bohemian Rhapsody?",
     answer: "Queen",
     potentialAnswer: ["The Beatles", "Led Zeppelin", "Pink Floyd", "The Rolling Stones", "David Bowie"],
   },
   {
-    question: "Who is known as the 'Godfather of Heavy Metal'?",
+    question: "Who is known as the 'Godfather of Heavy Metal?",
     answer: "Ozzy Osbourne",
     potentialAnswer: ["Tony Iommi", "Lemmy Kilmister", "Rob Halford", "James Hetfield", "Kirk Hammett"],
-  }
-];
+  },
+  {
+    question: "Who is regarded as the most unique guitarist(Impossible)?",
+    answer: "Jeff Beck",
+    potentialAnswer: ["Prince", "Alan Holdsworth", "Nigel Tufnel", "Les Paul" ],
+  }]

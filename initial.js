@@ -7,5 +7,9 @@ startButton.addEventListener("click", function () {
   localStorage.setItem("name", nameInput);
   localStorage.setItem("difficulty", difficultyLevel);
 
-  location.href = "./asset/pages/quiz.html";
+  if (nameInput === "") {
+    alert("Please type in a name");
+  } else {
+    location.href = "./asset/pages/quiz.html";
+  }
 });

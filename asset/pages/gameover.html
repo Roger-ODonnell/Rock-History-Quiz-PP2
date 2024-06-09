@@ -60,5 +60,18 @@
     </footer>
 
     <script type="module" src="/Quiz.js"></script>
+    <script>
+        let correctQuestions = localStorage.getItem("correctQuestions");
+        let answerCounterElement = document.getElementById("result");
+        let name = localStorage.getItem("name");
+        let result = localStorage.getItem("result");
+
+        if (result === "win"){
+          answerCounterElement.innerHTML = `<h2>Congrats ${name}!</h2><h2>You Win!</h2> <h2>Questions Answered: ${correctQuestions}</h2>`;
+        }else{
+          answerCounterElement.innerHTML = `<h2>Sorry ${name}</h2><h2>You Lose</h2> <h2>Questions Answered: ${correctQuestions}</h2>`;
+        }
+
+    </script>
   </body>
 </html>
