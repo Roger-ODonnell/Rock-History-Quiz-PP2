@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Link to stylesheet-->
     <link rel="stylesheet" href="/asset/style.css">
+    <!--Link to favicon-->
     <link
       rel="icon"
       type="image/x-icon"
@@ -24,20 +25,19 @@
   <!--End of head-->
   <!--Start of Body-->
   <body>
+    <!--Start of header-->
     <header>
       <h1>Great Irish Rock Quiz</h1>
     </header>
     <!--Start of Main-->
     <main>
+      <!--gameover title-->
       <div id="title">
         <h2>Gameover</h2>
       </div>
-
-      <div id="result">
-        <h2>You Win!</h2>
-        <h2>Questions Answered: 20</h2>
-      </div>
-
+      <!--result div for question answered info-->
+      <div id="result"></div>
+      <!--Start again button-->
       <div id="start-again-end">
         <button id="start-again-button">
           Start Again
@@ -56,8 +56,10 @@
         </ul>
       </div>
     </footer>
-
+    <!--End of footer-->
+    <!--Script for quiz-->
     <script type="module" src="/Quiz.js"></script>
+    <!--JavaScript for populating player info at end of their session-->
     <script>
         let correctQuestions = localStorage.getItem("correctQuestions");
         let answerCounterElement = document.getElementById("result");
@@ -69,7 +71,8 @@
         }else{
           answerCounterElement.innerHTML = `<h2>Sorry ${name}</h2><h2>You Lose</h2> <h2>Questions Answered: ${correctQuestions}</h2>`;
         }
-
     </script>
+    <!--End of script-->
   </body>
+  <!--End of body-->
 </html>
