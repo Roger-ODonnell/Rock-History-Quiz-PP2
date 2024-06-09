@@ -21,13 +21,13 @@
     <!--Page title-->
     <title>Homepage</title>
   </head>
-    <!--End of head-->
-   <!--Start of Body-->
+  <!--End of head-->
+  <!--Start of Body-->
   <body>
     <header>
       <h1>Great Irish Rock Quiz</h1>
     </header>
-     <!--Start of Main-->
+    <!--Start of Main-->
     <main>
       <div id="start-again">
         <button onclick="location.href = '/index.html'">Start Again?</button>
@@ -62,9 +62,19 @@
         <div>
           <h3 id="lives">Lives: 3</h3>
         </div>
+        <div id="instructions">
+          <h2>Instructions:</h2>
+          <ol>
+            <li>Read the question shown above</li>
+            <li>Click the answer you think is correct</li>
+            <li>
+                Get one wrong and you lose a life, 
+                3 lives gone means game over
+            </li>
+            <li>Play against friends and family to get the high score</li>
+          </ol>
+        </div>
       </section>
-
-       <!--Instructions-->
     </main>
     <!--End of Main-->
     <!--Start of footer-->
@@ -78,11 +88,11 @@
             ><li>Irish Rock Mueseum</li></a
           >
         </ul>
-      </div>  
+      </div>
     </footer>
-     <!--End of footer-->
-     <!--Link to javaScript file to be loaded after page-->
-     <script type="module" src="/questions.js"></script>
+    <!--End of footer-->
+    <!--Link to javaScript file to be loaded after page-->
+    <script type="module" src="/questions.js"></script>
     <script type="module" src="/Quiz.js"></script>
   </body>
 </html>

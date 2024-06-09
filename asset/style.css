@@ -129,6 +129,11 @@ h2 {
   background-color: #452255;
 }
 
+#instructions{
+  text-align: center;
+  padding: 1rem;
+}
+
 footer {
   position: fixed;
   bottom: 0;
