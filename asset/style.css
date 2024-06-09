@@ -183,7 +183,7 @@ footer a {
   color: white;
   text-decoration: none;
 }
-footer a:hover {
+footer li:hover {
   transform: scale(1.2);
 }
 
