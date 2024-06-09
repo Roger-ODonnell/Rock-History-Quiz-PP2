@@ -134,6 +134,30 @@ h2 {
   padding: 1rem;
 }
 
+#title{
+  font-size: 30px;
+}
+#result{
+  margin-top: 5rem;
+  font-size: 30px;
+}
+#start-again-end{
+  text-align: center;
+}
+#start-again-end button{
+  padding: 1rem 1rem;
+  background-color: #270c33;
+  border-radius: 1rem;
+  font-family: "RocknRoll One", sans-serif;
+  color: white;
+  font-size: 20px;
+  border-color: transparent;
+  background-position: 0px;
+}
+#start-again-end button:hover {
+  transform: scale(1.2);
+}
+
 footer {
   position: fixed;
   bottom: 0;

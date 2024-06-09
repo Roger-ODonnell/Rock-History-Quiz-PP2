@@ -4,6 +4,10 @@ import {
   hardQuestionList,
 } from "./questions.js";
 
+let startAgainButton = document.getElementById("start-again-button");
+startAgainButton.addEventListener("click", restart)
+
+if (window.location.pathname.endsWith('quiz.html')) {
 let lives = 3;
 let correctAnswers = 0;
 let livesElement = document.getElementById("lives");
@@ -31,6 +35,7 @@ function QuizLoad() {
   questionObjIndex = Math.floor(Math.random() * currentQuestionList.length);
   randomQuestion(currentQuestionList[questionObjIndex]);
 }
+
 
 function randomQuestion(questionObj) {
   let question = document.getElementById("question");
@@ -77,6 +82,7 @@ function checkAnswer(selectedAnswer, correctAnswer) {
   }
 }
 
+
 function correct() {
   questionCounter++;
   correctAnswers++;
@@ -84,7 +90,7 @@ function correct() {
 
   currentQuestionList.splice(questionObjIndex, 1);
   if (currentQuestionList.length <= 0) {
-    location.href = "/asset/pages/loser.html";//Out of questions Page
+    location.href = "/asset/pages/gameover.html";//Out of questions Page
   }
   QuizLoad();
 }
@@ -96,13 +102,18 @@ function inCorrect() {
   if (lives > 0) {
     currentQuestionList.splice(questionObjIndex, 1);
     if (currentQuestionList.length <= 0) {
-      location.href = "/asset/pages/loser.html";//Out of questions Page
+      location.href = "/asset/pages/gameover.html";//Out of questions Page
     }
     QuizLoad();
   } else {
-    location.href = "/asset/pages/loser.html";
+    location.href = "/asset/pages/gameover.html";
   }
 }
 
 // Start the game
 QuizLoad();
+}
+
+function restart () {
+  location.href = "/index.html";
+}
