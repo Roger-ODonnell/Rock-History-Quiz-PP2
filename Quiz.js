@@ -22,12 +22,12 @@ livesElement.innerHTML = `Lives: ${lives}`;
 
 if (window.location.pathname.endsWith("quiz.html")) {
     // Start the game
-    QuizLoad();
+    quizLoad();
 
   }
 
   // Start the quiz or Load the next random question
-  function QuizLoad () {
+  function quizLoad () {
     let difficulty = localStorage.getItem("difficulty");
     console.log(difficulty);
 
@@ -103,7 +103,7 @@ if (window.location.pathname.endsWith("quiz.html")) {
       }
       location.href = "/asset/pages/gameover.html";
     }
-    QuizLoad();
+    quizLoad();
   }
 
   function inCorrect() {
@@ -117,7 +117,7 @@ if (window.location.pathname.endsWith("quiz.html")) {
         localStorage.setItem("result", "win");
         location.href = "/asset/pages/gameover.html";
       }
-      QuizLoad();
+      quizLoad();
     } else {
       localStorage.setItem("correctQuestions", questionCounter);
       localStorage.setItem("result", "lose");
