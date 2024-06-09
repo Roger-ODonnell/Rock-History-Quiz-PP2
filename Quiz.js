@@ -4,23 +4,30 @@ import {
   hardQuestionList,
 } from "./questions.js";
 
+let lives = 3;
+let correctAnswers = 0;
+let livesElement = document.getElementById("lives");
+let correctAnswersElement = document.getElementById("correct-answers");
+let questionCounter = 0;
+let questionObjIndex;
+let currentQuestionList;
+
 let startAgainButton = document.getElementById("start-again-button");
 startAgainButton.addEventListener("click", restart);
 
-if (window.location.pathname.endsWith("quiz.html")) {
-  let lives = 3;
-  let correctAnswers = 0;
-  let livesElement = document.getElementById("lives");
-  let correctAnswersElement = document.getElementById("correct-answers");
-  let questionCounter = 0;
-  let questionObjIndex;
-  let currentQuestionList;
+correctAnswersElement.innerHTML = `Correct Answers: ${correctAnswers}`;
+livesElement.innerHTML = `Lives: ${lives}`;
 
-  correctAnswersElement.innerHTML = `Correct Answers: ${correctAnswers}`;
-  livesElement.innerHTML = `Lives: ${lives}`;
+
+
+if (window.location.pathname.endsWith("quiz.html")) {
+    // Start the game
+    QuizLoad();
+
+  }
 
   // Start the quiz or Load the next random question
-  function QuizLoad() {
+  function QuizLoad () {
     let difficulty = localStorage.getItem("difficulty");
     console.log(difficulty);
 
@@ -90,11 +97,11 @@ if (window.location.pathname.endsWith("quiz.html")) {
     if (currentQuestionList.length <= 0) {
       localStorage.setItem("correctQuestions", questionCounter);
       if (lives > 0) {
-        localStorage.setItem("result", "win")
+        localStorage.setItem("result", "win");
       } else if (lives < 1) {
-        localStorage.setItem("result", "lose")
+        localStorage.setItem("result", "lose");
       }
-      location.href = "/asset/pages/gameover.html"; //Out of questions Page
+      location.href = "/asset/pages/gameover.html";
     }
     QuizLoad();
   }
@@ -107,20 +114,16 @@ if (window.location.pathname.endsWith("quiz.html")) {
       currentQuestionList.splice(questionObjIndex, 1);
       if (currentQuestionList.length <= 0) {
         localStorage.setItem("correctQuestions", questionCounter);
-        localStorage.setItem("result", "win")
-        location.href = "/asset/pages/gameover.html"; //Out of questions Page
+        localStorage.setItem("result", "win");
+        location.href = "/asset/pages/gameover.html";
       }
       QuizLoad();
     } else {
       localStorage.setItem("correctQuestions", questionCounter);
-      localStorage.setItem("result", "lose")
+      localStorage.setItem("result", "lose");
       location.href = "/asset/pages/gameover.html";
     }
   }
-
-  // Start the game
-  QuizLoad();
-}
 
 function restart() {
   location.href = "/index.html";
