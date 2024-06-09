@@ -10,6 +10,6 @@ startButton.addEventListener("click", function () {
   if (nameInput === "") {
     alert("Please type in a name");
   } else {
-    location.href = "./asset/pages/quiz.html";
+    location.href = "/asset/pages/quiz.html";
   }
 });

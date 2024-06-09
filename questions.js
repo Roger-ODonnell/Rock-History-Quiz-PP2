@@ -38,8 +38,34 @@ export let easyQuestionList = [
     question: "Which member of The Beatles was known as the 'Quiet Beatle?",
     answer: "George Harrison",
     potentialAnswer: ["John Lennon", "Paul McCartney", "Ringo Starr", "Pete Best", "Stuart Sutcliffe"],
+  },
+  {
+    question: "What band is known for the song 'Dream On'?",
+    answer: "Aerosmith",
+    potentialAnswer: ["Guns N' Roses", "Queen", "Journey", "Bon Jovi", "Foreigner"],
+  },
+  {
+    question: "Which band is famous for the song 'Imagine'?",
+    answer: "John Lennon",
+    potentialAnswer: ["The Beatles", "George Harrison", "Paul McCartney", "Elton John", "David Bowie"],
+  },
+  {
+    question: "Which rock band is known for the hit song 'Livin' on a Prayer'?",
+    answer: "Bon Jovi",
+    potentialAnswer: ["Aerosmith", "Def Leppard", "Journey", "Poison", "Motley Crue"],
+  },
+  {
+    question: "Who is the drummer for The Beatles?",
+    answer: "Ringo Starr",
+    potentialAnswer: ["John Bonham", "Keith Moon", "Charlie Watts", "Neil Peart", "Lars Ulrich"],
+  },
+  {
+    question: "What band is known for the song 'Another One Bites the Dust'?",
+    answer: "Queen",
+    potentialAnswer: ["The Rolling Stones", "Led Zeppelin", "AC/DC", "Aerosmith", "Bon Jovi"],
   }
 ];
+
 
 
 export let normalQuestionList = [
@@ -67,8 +93,34 @@ export let normalQuestionList = [
     question: "Which rock band is known for the hit song 'Don't Stop Believin?",
     answer: "Journey",
     potentialAnswer: ["Foreigner", "REO Speedwagon", "Styx", "Kansas", "Boston"],
+  },
+  {
+    question: "Who is the lead singer of Pearl Jam?",
+    answer: "Eddie Vedder",
+    potentialAnswer: ["Chris Cornell", "Kurt Cobain", "Scott Weiland", "Layne Staley", "Dave Grohl"],
+  },
+  {
+    question: "Which band released the song 'Enter Sandman'?",
+    answer: "Metallica",
+    potentialAnswer: ["Megadeth", "Slayer", "Pantera", "Anthrax", "Iron Maiden"],
+  },
+  {
+    question: "Who is the guitarist for Led Zeppelin?",
+    answer: "Jimmy Page",
+    potentialAnswer: ["Eric Clapton", "Jeff Beck", "Jimi Hendrix", "David Gilmour", "Pete Townshend"],
+  },
+  {
+    question: "Which band is known for the album 'Back in Black'?",
+    answer: "AC/DC",
+    potentialAnswer: ["Aerosmith", "Van Halen", "Guns N' Roses", "Kiss", "Def Leppard"],
+  },
+  {
+    question: "Which band had a hit with the song 'Every Breath You Take'?",
+    answer: "The Police",
+    potentialAnswer: ["U2", "Genesis", "Dire Straits", "Simple Minds", "INXS"],
   }
 ];
+
 
 
 export let hardQuestionList = [
@@ -111,4 +163,26 @@ export let hardQuestionList = [
     question: "Who is regarded as the most unique guitarist(Impossible)?",
     answer: "Jeff Beck",
     potentialAnswer: ["Prince", "Alan Holdsworth", "Nigel Tufnel", "Les Paul" ],
-  }]
+  },
+  {
+    question: "Which band released the album 'OK Computer'?",
+    answer: "Radiohead",
+    potentialAnswer: ["Nirvana", "Pearl Jam", "Blur", "Oasis", "The Smashing Pumpkins"],
+  },
+  {
+    question: "Who is the lead singer of the band Soundgarden?",
+    answer: "Chris Cornell",
+    potentialAnswer: ["Eddie Vedder", "Kurt Cobain", "Layne Staley", "Scott Weiland", "Dave Grohl"],
+  },
+  {
+    question: "Which band released the song 'Black Hole Sun'?",
+    answer: "Soundgarden",
+    potentialAnswer: ["Pearl Jam", "Nirvana", "Alice in Chains", "Foo Fighters", "Red Hot Chili Peppers"],
+  },
+  {
+    question: "Who played bass guitar for the band The Clash?",
+    answer: "Paul Simonon",
+    potentialAnswer: ["Sid Vicious", "John Entwistle", "John Paul Jones", "Flea", "Duff McKagan"],
+  }
+];
+
