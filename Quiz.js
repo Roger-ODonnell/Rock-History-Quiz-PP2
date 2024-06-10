@@ -1,3 +1,4 @@
+//Quiz page code
 import {
   easyQuestionList,
   normalQuestionList,
@@ -125,6 +126,7 @@ function restart() {
   location.href = "/index.html";
 }
 
+//Game over Page code
 if (window.location.pathname.endsWith("gameover.html")) {
   let correctQuestions = localStorage.getItem("correctQuestions");
   let answerCounterElement = document.getElementById("result");
