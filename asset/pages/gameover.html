@@ -58,21 +58,7 @@
     </footer>
     <!--End of footer-->
     <!--Script for quiz-->
-    <script type="module" src="/Quiz.js"></script>
-    <!--JavaScript for populating player info at end of their session-->
-    <script>
-        let correctQuestions = localStorage.getItem("correctQuestions");
-        let answerCounterElement = document.getElementById("result");
-        let name = localStorage.getItem("name");
-        let result = localStorage.getItem("result");
-
-        if (result === "win"){
-          answerCounterElement.innerHTML = `<h2>Congrats ${name}!</h2><h2>You Win!</h2> <h2>Questions Answered: ${correctQuestions}</h2>`;
-        }else{
-          answerCounterElement.innerHTML = `<h2>Sorry ${name}</h2><h2>You Lose</h2> <h2>Questions Answered: ${correctQuestions}</h2>`;
-        }
-    </script>
-    <!--End of script-->
+    <script type="module" src="/quiz.js"></script>
   </body>
   <!--End of body-->
 </html>
