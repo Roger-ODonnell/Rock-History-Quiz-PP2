@@ -123,7 +123,7 @@ function inCorrect() {
 }
 
 function restart() {
-  location.href = "Rock-History-Quiz-PP2/index.html";
+  location.href = "index.html";
 }
 
 //Game over Page code
