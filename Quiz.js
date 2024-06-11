@@ -98,7 +98,7 @@ function correct() {
     } else if (lives < 1) {
       localStorage.setItem("result", "lose");
     }
-    location.href = "./asset/pages/gameover.html";
+    location.href = "../asset/pages/gameover.html";
   }
   quizLoad();
 }
@@ -112,13 +112,13 @@ function inCorrect() {
     if (currentQuestionList.length <= 0) {
       localStorage.setItem("correctQuestions", questionCounter);
       localStorage.setItem("result", "win");
-      location.href = "./asset/pages/gameover.html";
+      location.href = "../asset/pages/gameover.html";
     }
     quizLoad();
   } else {
     localStorage.setItem("correctQuestions", questionCounter);
     localStorage.setItem("result", "lose");
-    location.href = "./asset/pages/gameover.html";
+    location.href = "../asset/pages/gameover.html";
   }
 }
 
