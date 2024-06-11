@@ -201,5 +201,9 @@ https://www.irishamericanmom.com/top-ten-irish-rock-bands/
 <h1>Credits</h1>
 <p>Id like to thank <a href="https://github.com/Mienjung97/Owning-Cats">Mienjung97</a> for a clean and straight forward readme template and structure</p>
 
+<h2>Notes:</h2>
+<p>Change Restart function in quiz.js to your own github url for restart button to function. I didnt get to fix it with relative links.</p>
+<p>All JS scripts are in the root of the folder which isnt ideal, a quick fix to this would to make them a folder in assets but I couldnt get links in my js to html pages to work so sadly that is my own fix right now.</p>
+
 <a href="#top">Back to top</a>
 
