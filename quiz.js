@@ -123,7 +123,7 @@ function inCorrect() {
 }
 
 function restart() {
-  location.href = "./asset/pages/quiz.html";
+  location.href = "./index.html";
 }
 
 //Game over Page code
