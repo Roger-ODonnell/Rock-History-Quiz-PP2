@@ -123,7 +123,7 @@ function inCorrect() {
 }
 
 function restart() {
-  location.href = "/index.html";
+  location.href = "https://roger-odonnell.github.io/Rock-History-Quiz-PP2/";
 }
 
 //Game over Page code
