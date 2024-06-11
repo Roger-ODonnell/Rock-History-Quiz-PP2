@@ -4,7 +4,7 @@
 
 <H1 id="Overview">Site Overview</H1>
 <hr>
-<p>Pending</p>
+<p>A mix of Irish Rock and all round rock general questions ranging from difficulties of Easy To Hard. The site should be fun to play and responsive so you can challenge friends and family on the go wherever you are.</p>
 
 <hr>
 
