@@ -123,7 +123,7 @@ function inCorrect() {
 }
 
 function restart() {
-  location.href = "./index.html";
+  location.href = "../../index.html";
 }
 
 //Game over Page code
