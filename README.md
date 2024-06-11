@@ -27,7 +27,7 @@
 <h1 id="planning">Site Planning:</h1>
 <hr>
 <h2>Idea</h2>
-<p>Pending</p>
+<p>A mix of Irish Rock and all round rock general questions ranging from difficulties of Easy To Hard. The site should be fun to play and responsive so you can challenge friends and family on the go wherever you are.</p>
 
 <h2>Site Aims</h2>
 <ul>
@@ -162,10 +162,18 @@
 <H1 id="lighthouse-testing">Lighthouse</H1>
 
 <h2>Desktop</h2>
-<h3>Homepage</h3>
+
+![Screenshot 2024-06-11 235938](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/9fb252a7-6dab-41d7-ba78-b88c61fb0e2e)
+![Screenshot 2024-06-12 000019](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/4c527344-42ab-4892-97f8-ec8f0299bb4c)
+![Screenshot 2024-06-12 000047](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/3550ae4e-18b5-49e5-82a1-5e3e0714bf6a)
+
 
 <h2>Mobile</h2>
-<h3>Homepage</h3>
+
+![Screenshot 2024-06-12 000206](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/c2214f24-8a88-4d17-8211-2093b401dafc)
+![Screenshot 2024-06-12 000233](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/f4b8776e-8ffe-46a8-af20-c3401f477d38)
+![Screenshot 2024-06-12 000300](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/1b0593e0-ace8-4203-892a-7622668143fb)
+
 
 
 <a href="#top">Back to top</a>
@@ -176,8 +184,6 @@
   <li>Microsoft Edge</li>
   <li>Mozilla Firefox</li>
 </ol>
-<p>Pending</p>
-
 <a href="#top">Back to top</a>
 
 <h1 id="content">Content And Media References</h1>
@@ -189,10 +195,15 @@
   <li>Responsive Header Image in this read me was made by <a href="https://ui.dev/amiresponsive">amiresponsive</a></li>
 </ul>
 
-Photo references can be found here:
+Photo reference for footer and header can be found here:
+https://www.irishamericanmom.com/top-ten-irish-rock-bands/
 
 <h1>Credits</h1>
 <p>Id like to thank <a href="https://github.com/Mienjung97/Owning-Cats">Mienjung97</a> for a clean and straight forward readme template and structure</p>
+
+<h2>Notes:</h2>
+<p>Change Restart function in quiz.js to your own github url for restart button to function. I didnt get to fix it with relative links.</p>
+<p>All JS scripts are in the root of the folder which isnt ideal, a quick fix to this would to make them a folder in assets but I couldnt get links in my js to html pages to work so sadly that is my own fix right now.</p>
 
 <a href="#top">Back to top</a>
 
