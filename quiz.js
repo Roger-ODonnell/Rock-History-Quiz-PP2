@@ -98,7 +98,7 @@ function correct() {
     } else if (lives < 1) {
       localStorage.setItem("result", "lose");
     }
-    location.href = "./asset/pages/quiz.html";
+    location.href = "/Rock-History-Quiz-PP2/asset/pages/gameover.html";
   }
   quizLoad();
 }
@@ -112,18 +112,18 @@ function inCorrect() {
     if (currentQuestionList.length <= 0) {
       localStorage.setItem("correctQuestions", questionCounter);
       localStorage.setItem("result", "win");
-      location.href = "./asset/pages/quiz.html";
+      location.href = "/Rock-History-Quiz-PP2/asset/pages/gameover.html";
     }
     quizLoad();
   } else {
     localStorage.setItem("correctQuestions", questionCounter);
     localStorage.setItem("result", "lose");
-    location.href = "./asset/pages/quiz.html";
+    location.href = "/Rock-History-Quiz-PP2/asset/pages/gameover.html";
   }
 }
 
 function restart() {
-  location.href = "./index.html";
+  location.href = "/Rock-History-Quiz-PP2/index.html";
 }
 
 //Game over Page code
