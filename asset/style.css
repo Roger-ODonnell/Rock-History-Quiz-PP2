@@ -16,7 +16,7 @@ body {
 
 h1 {
   text-align: center;
-  background-image: url(/asset/images/rock-banner.jpeg);
+  background-image: url(../asset/images/rock-banner.jpeg);
   padding: 1rem 5em;
   background-position: 0;
   margin-top: 0;
