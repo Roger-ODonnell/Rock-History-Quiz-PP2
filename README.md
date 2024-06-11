@@ -31,12 +31,14 @@
 
 <h2>Site Aims</h2>
 <ul>
-  <li>Make an intuitive, reponsive website</li>
+  <li>Make an intuitive, reponsive website, make it fun and replayable with various difficulty levels</li>
 </ul>
 
 <h2>Target Audience</h2>
 <ul>
   <li>Users interested in music</li>
+  <li>Users looking to test their music knowledge</li>
+  <li>Users looking to have fun with a quiz</li>
 </ul>
 
 <h2>Site Goals</h2>
@@ -50,12 +52,15 @@
 <ul>
   <li>I will use good css practice and media queries to handle all device screen types.</li>
   <li>I will use adobe color to match up a nice color scheme to maintain a theme.</li>
+  <li>The user will have fun playing through the quiz with no interrupting erros or slow responses</li>
 </ul>
 
 <h3>How will I achieve my goals?</h3>
 <ul>
   <li>I will use complimenting colors to achieve easy on the eye's navigation</li>
   <li>I Will make all pages responsive to allow viewing on any device</li>
+  <li>I will make interesting and fun questions to keep the user playing and enjoying the quiz</li>
+  <li>I will use proper js practice to allow responsive input and data return</li>
 </ul>
 
 <a href="#top">Back to top</a>
@@ -64,8 +69,7 @@
 <h3>My wireframe designs where created using figma.</h3>
 
 <h4>Mobile</h4>
-
-
+![Gameover-Page-Mobile](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/38ab7a13-1988-43c8-bd88-22c5c49375df)
 <br>
 
 <h4>Desktop</h4>
