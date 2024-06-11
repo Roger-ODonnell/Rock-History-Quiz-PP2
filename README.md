@@ -1,7 +1,7 @@
+![Screenshot 2024-06-11 234244](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/5ef2ed9a-697d-4e0d-9c59-31fe5bf2bf6f)
+
 <H1 id="top">Welcome to my Rock Music Quiz Website</H1>
 <hr>
-
-
 <H1 id="Overview">Site Overview</H1>
 <hr>
 <p>A mix of Irish Rock and all round rock general questions ranging from difficulties of Easy To Hard. The site should be fun to play and responsive so you can challenge friends and family on the go wherever you are.</p>
@@ -69,33 +69,45 @@
 <h3>My wireframe designs where created using figma.</h3>
 
 <h4>Mobile</h4>
-![Gameover-Page-Mobile](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/38ab7a13-1988-43c8-bd88-22c5c49375df)
+
+![Gameover-Page-Mobile](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/ecad07a6-c5c2-430f-a8d1-f37f18312386)
+![Home-Page-Mobile](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/b48ddacc-0df5-400f-bfbb-4f1946fbe28d)
+![Quiz-Page-Mobile](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/0b450818-ed2a-4b15-b1fa-e78a2dd3145d)
 <br>
 
 <h4>Desktop</h4>
 
+![Gameover-Page-Desktop](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/c1a96b1e-9f3d-43cb-8a48-d3bb09869925)
+![Home-Page-Desktop](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/c3b495ad-6d52-4c2c-aa14-de87e73afda9)
+![Quiz-Page-Desktop](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/aa4a59dd-ff75-41fa-861f-3003560032fd)
 
 <a href="#top">Back to top</a>
 
 <h1 id="typography">Typography</h1>
 <P>I selected RocknRoll One Font for use accross my website (<a href="https://fonts.google.com/specimen/RocknRoll+One?query=rock">RockNRoll One</a>)</P>
 
+![Screenshot 2024-06-11 234557](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/223bb59e-ce76-42fc-a1c7-e5ded40d8e2f)
+
 <h1>Colors</h1>
-<p></p>
+
+![Screenshot 2024-05-26 102817](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/e641e940-5730-4418-8ac8-d041dd30bb8b)
 <br>
 
-<p>Created with coolors (<a href="">Pending/</a>)</p>
+<p>Created with Adobe Color (<a href="https://color.adobe.com/">Adobe Color</a>)</p>
 <a href="#top">Back to top</a>
 
 <h1 id="features">Features</h1>
-<h2>Navigation</h2>
-
-<h3>Desktop Navigation</h3>
-
-<h3>Mobile Navigation Open</h3>
-
+  
 <h1>Footer</h1>
-<p>pending</p>
+<p>Links to external pages</p>
+
+![Screenshot 2024-06-11 235323](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/71c4ced8-7ed0-4fb9-bb8f-61dd5439b14b)
+
+<h1>Name and Difficulty Input</h1>
+<p>Saves players name and their difficulty level in local storage for use accross the site</p>
+
+![Screenshot 2024-06-11 235534](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/bd007811-1011-4198-8e83-d337baf8857d)
+
 
 <a href="#top">Back to top</a>
 
@@ -104,7 +116,7 @@
 <ol>
   <li><a target="_blank" href="https://html.spec.whatwg.org/">HTML</a> - Provides the content and structure for my webpage</li>
   <li><a target="_blank" href="https://www.w3.org/Style/CSS/Overview.en.html">CSS</a> - Provides the styling and helps responsiveness accross devices</li>
-  <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a> - Helped power the background functionality of my mobile navigation bar</li>
+  <li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a> - Powered the Quiz backend and page navigation </li>
   <li><a target="_blank" href="https://www.gitpod.io/">Gitpod</a> - Loaded my project from the initial template</li>
   <li><a target="_blank" href="https://www.figma.com/">Figma</a> - Helped me design wireframes to plan my site</li>
   <li><a target="_blank" href="https://www.Github.com">Github</a> - Hosted my site and allowed me to store and track my projects changes</li>
@@ -126,7 +138,19 @@
 <h2>Validation</h2>
 <p>Homepage</p>
 
+  ![Screenshot 2024-06-11 234938](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/b6bcd074-bd0b-40d5-8e14-458ad10b8505)
+  
+<p>Quiz Page</p>
+
+  ![Screenshot 2024-06-11 235001](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/b4da8b82-ed1c-4422-98d0-8b894517c455)
+
+<p>Gameover Page</p>
+
+  ![Screenshot 2024-06-11 235023](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/70c96783-c47d-40aa-9841-0eb5314226e2)
+  
 <p>CSS</p>
+
+![Screenshot 2024-06-11 235225](https://github.com/Roger-ODonnell/Rock-History-Quiz-PP2/assets/71945647/c2b27f69-30d2-4151-8b66-51f71fbd766d)
 
 <a href="#top">Back to top</a>
 
