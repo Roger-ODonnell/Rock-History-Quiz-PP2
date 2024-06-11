@@ -78,7 +78,7 @@
 <a href="#top">Back to top</a>
 
 <h1 id="typography">Typography</h1>
-<P>I selected pending Font for use accross my website (<a href="">Pending</a>)</P>
+<P>I selected RocknRoll One Font for use accross my website (<a href="https://fonts.google.com/specimen/RocknRoll+One?query=rock">RockNRoll One</a>)</P>
 
 <h1>Colors</h1>
 <p></p>
@@ -159,7 +159,7 @@
 <h1 id="content">Content And Media References</h1>
 <ul>
   <li>Font came from <a href="https://fonts.google.com/">Google Fonts</a></li>
-  <li>Icon came from <a href="https://fontawesome.com/">Fontawesome</a></li>
+  <li>Icons came from <a href="https://fontawesome.com/">Fontawesome</a></li>
   <li>Color Palette came from <a href="https://color.adobe.com/create/color-wheel">Adobe Color</a></li>
   <li>Wireframe came from <a href="https://www.figma.com/">Figma</a></li>
   <li>Responsive Header Image in this read me was made by <a href="https://ui.dev/amiresponsive">amiresponsive</a></li>
